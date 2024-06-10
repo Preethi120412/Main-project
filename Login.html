@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>body{
+    background-size:cover;
+    background-position: center;
+  }
+    /* Custom styles */
+
+    .login-container {
+      max-width: 400px;
+      margin: 100px auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head><body background="f.jpg"></body>
+<body align="'center">
+  <div class="container">
+    <div class="login-container">
+      <h2 class="text-center mb-4">Login</h2>
+      <form name="myform" action="Loginpage.html"	onsubmit="return loginValidation(this)">
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" id="password" placeholder="Password" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Login</button>
+      </form>
+    </div>
+  </div><script>
+    // User Validations
+function loginValidation() {
+        // Ramesh
+var uname = document.myform.username.value;
+         //Ramesh@123
+var password = document.myform.password.value;
+        if(uname==null || uname=="") {
+          alert("Name cant be blank")
+          return false;  
+       } else if (password.length<6){
+          alert("Password Must be 6 letters")
+          return false;
+       }  
+       return true                 
+    }           
+ </script>
+
+</body>
+</html>
